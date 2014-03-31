@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* CSS Document */
 
+@import url("gothic.css");
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,6 +22,9 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	
+	font-family: "font", "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	color:#fff;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -28,6 +33,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	background-color:#000;
 }
 ol, ul {
 	list-style: none;
@@ -45,8 +51,72 @@ table {
 	border-spacing: 0;
 }
 
-#wrapper {
-	width:1050px;
-	height:576px;
-	background:#333;	
+.wrapper {
+	width:576px;
+	height:1050px;
+	background:#333;
+	margin:0 auto;
+	padding:50px;
+	background:url(../img/bg.jpg) no-repeat;
+	background-size: cover;
 }
+
+.header {
+	width:250px;
+	height:86px;
+	margin:0 auto;	
+}
+
+.hero {
+	width: 576px;
+	height: 50px;
+	margin: 50px auto;
+	text-align: center;
+}
+
+.clock {
+	position: absolute;
+	top: 1060px;
+	font-size:46pt;
+}
+
+.hero h1 {
+	font-weight:bold;
+	font-size:44pt;
+}
+
+.tube {
+	margin:50px auto;
+	width: 576px;
+}
+
+.tube-badge, .tube-info {
+	height: 30px;
+	padding: 10px;	
+	font-size: 12pt;
+	float:left;
+	border-top:solid 2px #fff;	
+}
+
+.tube-badge {
+	width: 200px;
+}
+
+.tube-info {
+	width: 336px;
+}
+
+.bakerloo .tube-badge { background-color: #ae6118; }
+.central .tube-badge { background-color: #e41f1f; }
+.circle .tube-badge { background-color: #f8d42d; }
+.district .tube-badge { background-color: #00a575; }
+.hammersmithandcity .tube-badge { background-color: #e899a8; }
+.jubilee .tube-badge { background-color: #8f989e; }
+.metropolitan .tube-badge { background-color: #893267; }
+.northern .tube-badge { background-color: #000000; }
+.piccadilly .tube-badge { background-color: #0450a1; }
+.victoria .tube-badge { background-color: #009fe0; }
+.waterlooandcity .tube-badge { background-color: #70c3ce; }
+.overground .tube-badge { background-color: #f86c00; }
+.dlr .tube-badge { background-color: #00bbb4; }
+.tube-error .tube-badge { background-color: #2C8AA8; }

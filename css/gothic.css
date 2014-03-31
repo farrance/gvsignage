@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "font";
+    src: url('../fonts/gothic.eot');
+    src: url('../fonts/gothic.eot') format('embedded-opentype'),
+         url('../fonts/gothic.woff') format('woff'),
+         url('../fonts/gothic.ttf') format('truetype');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face {
+    font-family: "font";
+    src: url('../fonts/gothicb.eot');
+    src: url('../fonts/gothicb.eot') format('embedded-opentype'),
+         url('../fonts/gothicb.woff') format('woff'),
+         url('../fonts/gothicb.ttf') format('truetype'),
+         url('../fonts/gothicb.svg#CenturyGothicBold') format('svg');
+    font-weight: bold;
+	font-style:normal;
+}
+
+@font-face {
+    font-family: "font";
+    src: url('../fonts/gothici.eot');
+    src: url('../fonts/gothici.eot') format('embedded-opentype'),
+         url('../fonts/gothici.woff') format('woff'),
+         url('../fonts/gothici.ttf') format('truetype'),
+         url('../fonts/gothici.svg#CenturyGothicItalic') format('svg');
+	font-weight:normal;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: "font";
+    src: url('../fonts/gothicbi.eot');
+    src: url('../fonts/gothicbi.eot') format('embedded-opentype'),
+         url('../fonts/gothicbi.woff') format('woff'),
+         url('../fonts/gothicbi.ttf') format('truetype'),
+         url('../fonts/gothicbi.svg#CenturyGothicBoldItalic') format('svg');
+    font-weight: bold;
+	font-style: italic;
+}
+
