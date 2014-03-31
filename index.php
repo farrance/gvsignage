@@ -35,9 +35,9 @@ function clock() {
 	var second	= date.getSeconds();
 	var time	= hour + ':' + minute + ':' + second;
 	
-   $('.clock').html(time);
-   setTimeout('clock()',1000);
-   
+	$('.clock').html(time);
+	setTimeout('clock()',1000);
+	
 }
 clock();
 

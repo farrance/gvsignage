@@ -1,10 +1,15 @@
 <?php
+
+ini_set('display_startup_errors',1);
+ini_set('display_errors',1);
+error_reporting(-1);
+
 class Signage {
 	
 	//Function for getting Tube Status as HTML
 	public function TubeStatus(){
 		
-		//Inital HTML response
+		//Initalise HTML response
 		$html = '';
 		
 		//Load tube status data
@@ -27,17 +32,18 @@ class Signage {
 			//Return array in HTML format
 			foreach($tubes as $tube){
 				
-				$name	= $tube['name'];
-				$class	= $tube['class'];
-				$status	= $tube['status'];
-				$details = (string)$tube['details'];
+				$name		= $tube['name'];
+				$class		= $tube['class'];
+				$status		= $tube['status'];
+				$details	= (string)$tube['details'];
+				$bold		= (!empty($details)) ? "style=\"font-weight:bold; color:red;\"": "";
 				
 				$html.= "		<div class=\"$class tube-animate\">";
 				$html.= "			<div class=\"tube-badge\">";
 				$html.= "				<p>$name</p>";
 				$html.= "			</div>";
 				$html.= "			<div class=\"tube-info\">";
-				$html.= "				<p alt=\"$details\" title=\"$details\">$status</p>";
+				$html.= "				<p $bold alt=\"$details\" title=\"$details\">$status</p>";
 				$html.= "			</div>";
 				$html.= "		</div>";
 				
@@ -49,7 +55,7 @@ class Signage {
 		else {
 		
 			$html.= "		<div class=\"tube-error tube-animate\">";
-			$html.= "			<div class=\"tube-badge $class\">";
+			$html.= "			<div class=\"tube-badge\">";
 			$html.= "				<p>Failed</p>";
 			$html.= "			</div>";
 			$html.= "			<div class=\"tube-info\">";
