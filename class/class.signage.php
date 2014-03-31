@@ -19,7 +19,8 @@ class Signage {
 				$tubes[] = array(
 					"name" => $line->Line['Name'],
 					"class" => strtolower(preg_replace("/[^A-Za-z0-9]/", "", $line->Line['Name'])),
-					"status" => $line->Status['Description']
+					"status" => $line->Status['Description'],
+					"details" => $line['StatusDetails']
 				);
 			}
 			
@@ -29,13 +30,14 @@ class Signage {
 				$name	= $tube['name'];
 				$class	= $tube['class'];
 				$status	= $tube['status'];
+				$details = (string)$tube['details'];
 				
 				$html.= "		<div class=\"$class tube-animate\">";
 				$html.= "			<div class=\"tube-badge\">";
 				$html.= "				<p>$name</p>";
 				$html.= "			</div>";
 				$html.= "			<div class=\"tube-info\">";
-				$html.= "				<p>$status</p>";
+				$html.= "				<p alt=\"$details\" title=\"$details\">$status</p>";
 				$html.= "			</div>";
 				$html.= "		</div>";
 				
